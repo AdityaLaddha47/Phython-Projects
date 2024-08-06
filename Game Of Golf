@@ -1,0 +1,160 @@
+counter = 1
+
+while counter < 2:
+    playernum = int(input('How many player are playing?'))
+    if 2 <= playernum <= 4:
+        print('Enter name of players one by one')
+        Name = []
+        for i in range(0, playernum):
+            Name.insert(i, str(input()))
+            print(Name)
+        print('Enter number of holes')
+        holenum = int(input())
+        if holenum == 9 or holenum == 18:
+            par = int(input('Enter Par'))
+            if (holenum == 9 and par >= 9) or (holenum == 18 and par >= 18):
+                print('Number of players playing are', playernum)
+                print('Name of players playing are:')
+                print(Name)
+                print('Number of holes are', holenum)
+                print('Par is', par)
+                Ans = int(input('Is this correct? Enter 2 for yes, 3 for no'))
+                if Ans == 2:
+                    counter = 2
+                    if playernum == 2:
+                        player1 = []
+                        player2 = []
+
+                        for i in range(0, holenum):
+                            Ans2 = 1
+                            while Ans2 < 2:
+                                print(Name[0], ' Enter your score for hole no.', i + 1)
+                                player1.insert(i, int(input()))
+                                print('Confirm your score for hole no.', i + 1)
+                                if int(input()) == player1[i]:
+                                    Ans2 = 2
+                                    Ans3 = 1
+
+                                    Expans = input('Do you want to see your total score? Enter Y for yes and N for no')
+                                    if Expans.upper() == 'Y':
+                                        print(sum(player1))
+                                    while Ans3 < 2:
+                                        print(Name[1], 'Enter your score for hole no.', i + 1)
+                                        player2.insert(i, int(input()))
+                                        print('Confirm your score for hole no.', i + 1)
+                                        if int(input()) == player2[i]:
+                                            Ans3 = 2
+                                            Expans = input(
+                                                'Do you want to see your total score? Enter Y for yes and N for no')
+                                            if Expans.upper() == 'Y':
+                                                print(sum(player2))
+                                        else:
+                                            print("Scores don't match")
+                                else:
+                                    print("Scores don't match")
+
+                    elif playernum == 3:
+                        player1 = []
+                        player2 = []
+                        player3 = []
+                        for i in range(0, holenum):
+                            Ans2 = 1
+                            while Ans2 < 2:
+                                print(Name[0], ' Enter your score for hole no.', i + 1)
+                                player1.insert(i, int(input()))
+                                print('Confirm your score for hole no.', i + 1)
+                                if int(input()) == player1[i]:
+                                    Ans2 = 2
+                                    Ans3 = 1
+                                    Expans = input('Do you want to see your total score? Enter Y for yes and N for no')
+                                    if Expans.upper() == 'Y':
+                                        print(sum(player1))
+                                    while Ans3 < 2:
+                                        print(Name[1], 'Enter your score for hole no.', i + 1)
+                                        player2.insert(i, int(input()))
+                                        print('Confirm your score for hole no.', i + 1)
+                                        if int(input()) == player2[i]:
+                                            Ans3 = 2
+                                            Ans4 = 1
+                                            Expans = input(
+                                                'Do you want to see your total score? Enter Y for yes and N for no')
+                                            if Expans.upper() == 'Y':
+                                                print(sum(player2))
+                                            while Ans4 < 2:
+                                                print(Name[2], 'Enter your score for hole no.', i + 1)
+                                                player3.insert(i, int(input()))
+                                                print('Confirm your score for hole no.', i + 1)
+                                                if int(input()) == player3[i]:
+                                                    Ans4 = 2
+                                                    Expans = input(
+                                                        'Do you want to see your total score? Enter Y for yes and N '
+                                                        'for no')
+                                                    if Expans.upper() == 'Y':
+                                                        print(sum(player3))
+
+                                        else:
+                                            print("Scores don't match")
+                                else:
+                                    print("Score don't match")
+
+                    else:
+                        player1 = []
+                        player2 = []
+                        player3 = []
+                        player4 = []
+                        for i in range(0, holenum):
+                            Ans2 = 1
+                            while Ans2 < 2:
+                                print(Name[0], ' Enter your score for hole no.', i + 1)
+                                player1.insert(i, int(input()))
+                                print('Confirm your score for hole no.', i + 1)
+                                if int(input()) == player1[i]:
+                                    Ans2 = 2
+                                    Ans3 = 1
+                                    Expans = input('Do you want to see your total score? Enter Y for yes and N for no')
+                                    if Expans.upper() == 'Y':
+                                        print(sum(player1))
+                                    while Ans3 < 2:
+                                        print(Name[1], 'Enter your score for hole no.', i + 1)
+                                        player2.insert(i, int(input()))
+                                        print('Confirm your score for hole no.', i + 1)
+                                        if int(input()) == player2[i]:
+                                            Ans3 = 2
+                                            Ans4 = 1
+                                            Expans = input(
+                                                'Do you want to see your total score? Enter Y for yes and N for no')
+                                            if Expans.upper() == 'Y':
+                                                print(sum(player2))
+                                            while Ans4 < 2:
+                                                print(Name[2], 'Enter your score for hole no.', i + 1)
+                                                player3.insert(i, int(input()))
+                                                print('Confirm your score for hole no.', i + 1)
+                                                if int(input()) == player3[i]:
+                                                    Ans4 = 2
+                                                    Ans5 = 1
+                                                    Expans = input(
+                                                        'Do you want to see your total score? Enter Y for yes and N '
+                                                        'for no')
+                                                    if Expans.upper() == 'Y':
+                                                        print(sum(player3))
+                                                    while Ans5 < 2:
+                                                        print(Name[3], 'Enter your score for hole no.', i + 1)
+                                                        player4.insert(i, int(input()))
+                                                        print('Confirm your score for hole no.', i + 1)
+                                                        Ans5 = 2
+                                                        Expans = input(
+                                                            'Do you want to see your total score? Enter Y for yes and '
+                                                            
+                                                            'N for no')
+                                                        if Expans.upper() == 'Y':
+                                                            print(sum(player1))
+
+                        # in Pseudocode array will be used and via a for loop everything all scores will be set to zero.
+                else:
+                    print('Unexpected input starting again')
+            else:
+                print('Inappropriate Par')
+        else:
+            print('Inappropriate number of holes')
+    else:
+        print('Inappropriate number of players')
